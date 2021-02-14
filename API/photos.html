@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style media="screen">
+       .userDiv{
+         color : ;
+       }
+    </style>
+
+  </head>
+<body
+<div class="users">
+
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="text/javascript">
+
+        axios.get("http://jsonplaceholder.typicode.com/todos/1")
+        .then(data =>{
+          data.data.forEach(titles => {
+            console.log(title);
+            createTitleDiv(title);
+          });
+        })
+        .catch(console.log);
+
+      function createTitleDiv(title){
+        let div = document.createElement('div');
+        div.className = 'titleDiv';
+        div.innerHTML = '<p>${title}</p>';
+        document.querySelector('#title').appendChild(div);
+      }
+  </script>
+</body>
+</html
